@@ -17,11 +17,8 @@
         <div class="row">
             <div class="col">
 
-                <div class="alert">
-                <button id="btn-sucesso" class="alert alert-success alert-dismissible" data-bs-dismiss="alert" style="display: none;" >Cadastro efetuado com sucesso!</button>
-                </div>
-
                 <form id="form">
+
                     <label class="form-label" for="nome">Seu Nome:</label>
                     <input class="form-control" type="text" placeholder="Digite seu nome" id="nome" name="nome" required>
 
@@ -33,6 +30,9 @@
 
                     <button type="submit" class="btn btn-success" id="btn-submit">Enviar</button>
 
+                    <div class="alert">
+                        <button id="btn-sucesso" class="alert alert-success">Cadastro efetuado!</button>
+                    </div>
 
                 </form>
             </div>
@@ -48,6 +48,19 @@
         $(document).ready(function(){
             $('#telefone').mask('(00) 00000-0000');
         });
+    </script>
+    <script>
+        const form = document.getElementById('form') 
+        
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            console.log(e);
+
+            const alertaSucesso = document.querySelector('#btn-sucesso').style.display = "block";
+        })
+
     </script>
 </body>
 </html>

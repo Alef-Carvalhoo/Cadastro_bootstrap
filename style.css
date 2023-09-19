@@ -51,3 +51,7 @@ form {
     margin-top: 150px;
     margin-bottom: -50px;
 }
+
+#btn-sucesso {
+    display: none;
+}
